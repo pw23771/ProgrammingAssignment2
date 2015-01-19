@@ -1,11 +1,10 @@
-## Ex:
-## mat<-matrix(c(1.1,2.1,3.1,4.1),nrow=2,ncol=2) # Create a invertable square matrix
-## makeCache<-makeCacheMatrix(mat) # Assign returned list to makeCache
+## Example of running the following two functions:
+## mat<-matrix(c(1.1,2.1,3.1,4.1),nrow=2,ncol=2) # Create an invertable square matrix
+## makeCache<-makeCacheMatrix(mat) # Assign a returned list to makeCache
 ## cacheSolve(makeCache) # Calculate inverse matrix, 1st time no cached
 ## cacheSolve(makeCache) # Calculate inverse matrix, from cached value from above.
 
-## This function creates a special "matrix" object
-## that can cache its inverse.
+## This "makeCacheMatrix" function creates a special "matrix" object that can cache its inverse.
 ## Input parameters:
 ## x: An invertable square matrix
 ## Output:
@@ -26,7 +25,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## The following function calculates the inverse of an invertable square "matrix"
+## The "cacheSolve" function calculates the inverse of an invertable square "matrix"
 ## created with the above function. However, it first checks to see if the
 ## inverse matrix has already been calculated. If so, it `get`s the inverse matrix from the
 ## cache and skips the computation. Otherwise, it calculates the inverse matrix of
